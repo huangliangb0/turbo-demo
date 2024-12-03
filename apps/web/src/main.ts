@@ -14,6 +14,7 @@ document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
       <img src="${typescriptLogo}" class="logo vanilla" alt="TypeScript logo" />
     </a>
     ${Header({ title: "Web" })}
+    <div>Turbo</div>
     <div class="card">
       ${Counter()}
       ${add(5,10)}
