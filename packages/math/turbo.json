@@ -1,0 +1,12 @@
+{
+  "extends": ["//"],
+  "globalDependencies": ["tsconfig.json"],
+  "tasks": {
+    "check-types": {
+      "inputs": ["**/*.{ts,tsx}"]
+    },
+    "build": {
+      "outputs": ["dist/**"]
+    }
+  }
+}

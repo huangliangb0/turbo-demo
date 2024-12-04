@@ -3,20 +3,19 @@
   "type": "module",
   "scripts": {
     "dev": "tsc --watch",
-    "build": "tsc"
+    "check-types": "tsc --noEmit",
+    "build2": "tsc",
+    "build": "tsup src/index.ts --format cjs,esm --dts"
   },
   "exports": {
-    "./add": {
-      "types": "./src/add.ts",
-      "default": "./dist/add.js"
-    },
-    "./subtract": {
-      "types": "./src/subtract.ts",
-      "default": "./dist/subtract.js"
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
     }
   },
   "devDependencies": {
     "@repo/typescript-config": "workspace:*",
+    "tsup": "^8.3.5",
     "typescript": "latest"
   }
 }

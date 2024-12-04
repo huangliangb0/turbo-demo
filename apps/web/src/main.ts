@@ -3,7 +3,7 @@ import "./style.css";
 import typescriptLogo from "/typescript.svg";
 import { Counter } from "@repo/ui/counter";
 import { setupCounter } from "@repo/ui/setup-counter";
-import { add } from "@repo/math/add";
+import { add } from "@repo/math";
 
 document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
   <div>
