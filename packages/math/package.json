@@ -1,16 +1,15 @@
 {
   "name": "@repo/math",
   "type": "module",
-  "version": "0.0.2",
-  "files": [
-    "dist"
-  ],
+  "version": "1.0.0",
   "scripts": {
     "dev": "tsup src/index.ts --format cjs,esm --dts --watch",
     "dev2": "tsc --watch",
     "check-types": "tsc --noEmit",
     "build2": "tsc",
-    "build": "tsup src/index.ts --format cjs,esm --dts"
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "clean": "'rm -rf .turbo && rm -rf node modules && rm -rf dist",
+    "lint": "eslint \"**/*.ts\""
   },
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -21,12 +20,14 @@
       "default": "./dist/index.js"
     }
   },
+  "files": [
+    "dist/**"
+  ],
   "devDependencies": {
+    "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
+    "eslint": "^8.57.0",
     "tsup": "^8.3.5",
     "typescript": "latest"
-  },
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org/"
   }
 }
