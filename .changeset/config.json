@@ -5,8 +5,8 @@
     { "repo": "tardis-ksh/demo-turborepo" }
   ],
   "commit": false,
-  "fixed": [["@repo/math"]],
-  "linked": [],
+  "fixed": [],
+  "linked": [["@repo/*"]],
   "access": "restricted",
   "baseBranch": "main",
   "updateInternalDependencies": "patch",
